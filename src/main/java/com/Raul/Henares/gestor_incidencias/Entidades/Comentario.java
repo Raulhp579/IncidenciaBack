@@ -20,6 +20,9 @@ public class Comentario {
     private Long id;
 
     @NonNull
+    private  Tipo tipo;
+
+    @NonNull
     private String mensaje;
 
     private LocalDateTime fecha = LocalDateTime.now();
