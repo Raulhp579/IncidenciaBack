@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/incidence")
+@CrossOrigin(origins = "http://localhost:4200")
 public class IncidenciaController {
 
     @Autowired
@@ -43,5 +44,10 @@ public class IncidenciaController {
     @GetMapping("getIncidence/{id}")
     public Incidencia getIncidencia(@PathVariable("id")Long id){
         return this.incidenciaService.getById(id);
+    }
+
+    @GetMapping("/showAll")
+    public List<Incidencia> getIncidencias(){
+        return this.incidenciaService.obtenerIncidencias();
     }
 }

@@ -58,4 +58,8 @@ public class IncidenciaService {
             this.incidenciaRepository.save(incidencia);
         }
     }
+
+    public List<Incidencia> obtenerIncidencias(){
+        return this.incidenciaRepository.findAll();
+    }
 }
