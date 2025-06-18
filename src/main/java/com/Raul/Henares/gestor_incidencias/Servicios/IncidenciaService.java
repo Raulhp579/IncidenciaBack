@@ -35,6 +35,11 @@ public class IncidenciaService {
         }
     }
 
+    public List<Incidencia> getPorNombre(String nombre) throws Exception {
+        Usuario usuario = this.usuarioRepository.findByNombre(nombre);
+        return this.incidenciaRepository.findByCliente(usuario);
+    }
+
     public List<Incidencia> getPorTecnico(Long tecnicoId) throws Exception {
         Usuario usuario = this.usuarioRepository.getReferenceById(tecnicoId);
         if (usuario.getRol().equals(Rol.TECNICO)){

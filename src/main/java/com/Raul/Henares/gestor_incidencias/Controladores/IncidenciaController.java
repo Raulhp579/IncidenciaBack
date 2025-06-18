@@ -50,4 +50,9 @@ public class IncidenciaController {
     public List<Incidencia> getIncidencias(){
         return this.incidenciaService.obtenerIncidencias();
     }
+
+    @GetMapping("/akjlshdad/{nombre}")
+    public List<Incidencia> getByNombre(@PathVariable("nombre") String nombre) throws Exception {
+        return  this.incidenciaService.getPorNombre(nombre);
+    }
 }
