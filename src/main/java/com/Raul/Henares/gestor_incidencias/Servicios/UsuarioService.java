@@ -39,4 +39,8 @@ public class UsuarioService {
 
         this.usuarioRepository.save(usuario);
     }
+
+    public Usuario getPorNombre(String nombre){
+        return this.getPorNombre(nombre);
+    }
 }

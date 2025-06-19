@@ -37,4 +37,9 @@ public class UsuarioController {
 
         this.usuarioService.modificarUsuario(idUsuario,cambio,valor);
     }
+
+    @GetMapping("/getByName/{nombre}")
+    public Usuario buscarPorNombre(String nombre){
+        return this.usuarioService.getPorNombre(nombre);
+    }
 }
