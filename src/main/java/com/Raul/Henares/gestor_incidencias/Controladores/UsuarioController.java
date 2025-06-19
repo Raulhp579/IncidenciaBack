@@ -39,7 +39,7 @@ public class UsuarioController {
     }
 
     @GetMapping("/getByName/{nombre}")
-    public Usuario buscarPorNombre(String nombre){
+    public Usuario buscarPorNombre(@PathVariable("nombre") String nombre){
         return this.usuarioService.getPorNombre(nombre);
     }
 }

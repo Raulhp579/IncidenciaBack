@@ -41,6 +41,6 @@ public class UsuarioService {
     }
 
     public Usuario getPorNombre(String nombre){
-        return this.getPorNombre(nombre);
+        return this.usuarioRepository.findByNombre(nombre);
     }
 }
